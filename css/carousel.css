@@ -1,0 +1,133 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap'); */
+
+.carousel-caption {
+    max-width: 550px !important;
+    left: 50px !important;
+    top: 30% !important;
+    text-align: left;
+
+}   
+
+.carousel-caption h2{
+    font-size: 30px;
+    color: cyan;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.carousel-caption p{
+    font-family: 'Lato', sans-serif !important;
+}
+
+
+.carousel-control-next-icon{
+    margin-right: -70%;
+}
+
+.carousel-control-prev-icon{
+    margin-left: -70%;
+}
+
+.left-overlay{
+    background-color: #17202E;
+    width: 84%;
+    height: 100%;
+    position: absolute;
+    left: 200px;
+    top: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+.trans-overlay{
+    background: rgb(255,255,255);
+    background: linear-gradient(to right, rgba(214,214,214,0.0) 0%, rgba(214,214,214,0.0) 70%, rgba(97,97,97,0.63) 100%);
+    width: 56%;
+    height: 100%;
+    position: absolute;
+    left: 2000px;
+    top:0;
+    bottom: 0;
+    /* clip-path: polygon(48% 0, 100% 0, 52% 100%, 0 100%); */
+    clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+}
+
+@media only screen and (max-width : 1200px){
+    .carousel-caption {
+        top: 18% !important;
+    }
+    .trans-overlay{
+        width: 86%;
+    }
+}
+
+
+@media only screen and (max-width : 1090px){
+    .carousel-caption {
+        top: 10% !important;
+    }
+    .trans-overlay{
+        width: 86%;
+    }
+}
+
+@media only screen and (max-width : 878px){
+    .carousel-caption h2{
+        font-size: 20px;
+    }
+    .carousel-caption p{
+        font-size: 15px;
+    }
+}
+
+
+
+
+@media only screen and (max-width : 768px){
+    .trans-overlay{
+        width: 90%;
+    }
+    .left-overlay{
+        width: 90%;
+    }
+    .carousel-caption h2{
+        font-size: 17px;
+    }
+
+    .carousel-caption p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width : 670px){
+    .carousel-caption {
+        top: 2% !important;
+    }
+
+    .carousel-caption h2{
+        font-size: 17px;
+    }
+
+    .carousel-caption p{
+        font-size: 15px;
+        margin-top: -30px;
+
+    }
+}
+
+@media only screen and (max-width : 590px){
+    .carousel-caption {
+        top: 2% !important;
+    }
+
+    .carousel-caption h2{
+        font-size: 15px;
+    }
+
+    .carousel-caption p{
+        font-size: 12px;
+        margin-top: -30px;
+        line-height: 1.1em;
+    }
+}
