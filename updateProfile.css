@@ -1,0 +1,69 @@
+	<style>
+.jhansiupdateprofile-page .nav-tabs .nav-link span.txt-orange {
+    color: #4e73df !important;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.jhansiupdateprofile-page .nav-tabs .nav-link a {
+    padding:0px;
+    font-size: 16px;
+    background-color: #6b6957;  
+}
+.jhansiupdateprofile-page .nav-tabs .nav-link {
+    color: #fff;
+    font-size: 16px;
+    border: none;
+}
+.jhansiupdateprofile-page {
+    width: 800px;
+    background-color: #fff;
+    margin: 60px;
+   
+    border-radius: 5px;
+    padding: 15px 10px 30px;
+}
+@media screen and (max-width: 768px) {
+.jhansiupdateprofile-page {
+    width: 315px;
+}
+}
+.jhansiupdateprofile-page label {
+    color: #000;
+    font-size: 13px;
+}
+
+}
+.jhansiupdateprofile-page .nav-tabs .nav-item.show .nav-link, .jhansiupdateprofile-page .nav-tabs .nav-link.active {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    border-bottom: 4px solid #fff;
+}
+.jhansiback-background {
+    background-color: #4e73df !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-submit, .btn-submit:hover, .jhansiupdateprofile-page .btn-secondary, .jhansiupdateprofile-page .btn-secondary:hover {
+    background-color: #26925E;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+}
+.jhansiupdateprofile-page .nav-tabs {
+    border-bottom: none;
+    margin-bottom: 35px;
+}
+
+.form-control.disabled {
+    font-size: 13px;
+}
+section#portlet_userprofile_INSTANCE_cwdh {
+    margin: 0px;
+}
+	</style>
