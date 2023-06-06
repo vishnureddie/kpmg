@@ -1,0 +1,16 @@
+Home:
+1. Update text below logo:
+Initiative by Infrastructure Finance Secretariat (IFS),
+Department of Economic Affairs, Ministry of Finance
+2. Use darker color shade for text below logo
+
+ 
+
+Infra Finance:
+1. Change sector to 'Issued by' filter Circular/Order
+2. Issued by will be search filter 
+3. Download column will be update to 'View/Download', where user can either download the document or can click on the URL
+4. Add a section 'Reports and Insights' where documents like in Knowledge resources will be displayed
+5. Update Budget link: https://www.indiabudget.gov.in/
+6. In training detail page update the last section to : To register for the training please click on the "DEA LMS" link. 
+Kindly login through existing account or register as new user.
