@@ -468,6 +468,12 @@ a.download_pdf_link  img{height: 30px !important;text-align: center;}
 .breadcrumb-item.active, .breadcrumb-item+.breadcrumb-item::before{ color:#E6E6E6; }
 
 
+/**/
+#circular_section{ 
+background:#fefefe url("../images/upcomingevent_bg.jpg") bottom no-repeat; background-size: cover;
+	margin: 0px;
+	padding:60px;
+}
 /* EVENT Sections */
 #event_section{
  background:#fefefe url("../images/upcomingevent_bg.jpg") bottom no-repeat; background-size: cover;}
@@ -518,7 +524,7 @@ a.download_pdf_link  img{height: 30px !important;text-align: center;}
 .event_detailslist li a{ color: #888;}
 
 .event_register_box{ border: solid 4px var(--color_green); background:var(--color_green) !important; }
-.event_register_box p.large_text{color: var(--color_white) !important; font-size: 18px ;  }
+.event_register_box p.large_text{color: var(--color_white) !important; font-size: 17px ; line-height: 150%;  }
 
 .register_btn{border:solid 2px var(--color_yellow); color:  var(--color_yellow);border-radius:0;background-color: var(--color_white);font-weight:bold;}
 .register_btn:hover{ border:solid 2px var(--color_white);  background-color: var(--color_white);color:  var(--color_green); }
@@ -691,6 +697,15 @@ background: linear-gradient(90deg, rgba(73,195,137,1) 0%, rgba(76,141,218,1) 100
 .mediagallery_card .card{ box-shadow: 0px 3px 16px 0px rgba(0 , 0 , 0 , .05);  border-bottom:solid 5px var(--bg_darkblue);}
 .mediagallery_card .card h5{ font-size:16px; color: var(--color_blue); }
 img.img-thumbnail{ width: 600px !important; height: 200px; border-radius: 0; border: 0;}
+.mediagallery_card .card .card-link a{color: var(--color_yellow); background-color: #F1F1F1; padding: 10px 25px 10px 20px; display: block; width: 130px; clip-path: polygon(0% 0%, 80% 0, 100% 100%, 0% 100%); font-size:15px; font-weight: 600; transition: all 0.3s; }
+
+.mediagallery_card .card p.card-link{ margin-bottom: 0; }
+.mediagallery_card .card:hover{ transition: all 0.3s; }
+.mediagallery_card .card:hover .card-link a{color: var(--color_yellow); background-color: #F3F3F3; width: 100%; clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%); text-align: center}
+
+.mediagallery_card .card.red .card-link a{color: var(--color_red);}
+.mediagallery_card .card.green .card-link a{color: var(--color_green);}
+.mediagallery_card .card.blue .card-link a{color: var(--color_blue);}
 
 /*Contact Us*/
 .form_email, .form_comment{ margin-top: 20px;}
@@ -730,7 +745,7 @@ img.img-thumbnail{ width: 600px !important; height: 200px; border-radius: 0; bor
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    background: #343434;
+    background: #555;
     margin: auto;
     text-align: center;
     line-height: 40px;
@@ -833,6 +848,7 @@ footer{ background: var(--color_white); color:#888; padding:0; font-size: 14px;}
 footer a{ color:#4B4B4B;}
 footer h6{font-size: 20px; color: #2B3342; font-weight: bold;  line-height: 1.5; margin-bottom: 20px; }
 footer .navbar-brand {font-size: 24px;}  
+.footer_text p{ margin-right:20px;}
 .top_footer i{ color:#08bdfa; padding-right: 5px;}
 .top_footer iframe{ border-radius: 5px; margin-right: 20px;  width:90%; height:150px;}
 .top_footer ul li{ margin-bottom: 5px;}
@@ -930,7 +946,7 @@ footer .navbar-brand {font-size: 24px;}
 	
 	.shadow_box{ width:100%;} 
 	.venue_description{padding:0; margin-bottom: 20px;}   
-	.event_top_img{ min-height:auto; background-size:contain; width:100%; }   
+	.event_top_img{ min-height:280px; background-size:contain; width:100%; }   
 	   
 	.news_heading {clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%); padding: 5px;}   
 	.news {height: 130px;} 
@@ -947,6 +963,9 @@ footer .navbar-brand {font-size: 24px;}
 	   
     .table-responsive>.table>tbody>tr>td, .table-responsive>.table>tbody>tr>th, .table-responsive>.table>tfoot>tr>td, .table-responsive>.table>tfoot>tr>th, .table-responsive>.table>thead>tr>td, .table-responsive>.table>thead>tr>th {
       white-space: nowrap; }
+	   
+	   .event_register_box, .register_btn{ text-align:center;}
+	   .register_btn{ margin-top:10px;}
 
     footer h6{margin-bottom: 10px; margin-top: 20px; text-align: center;}
     footer{margin-top:0px; text-align:center;}
