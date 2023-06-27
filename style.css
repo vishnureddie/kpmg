@@ -11,7 +11,7 @@
 }
 
 *,ul,li,p{ margin: 0; padding: 0;}
-body{ background:  var(--color_white) ; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 400; line-height: 150%; width: 100%; overflow-x: hidden; color: var(--primaryfontcolor);} 
+body{ background:  var(--color_white) ; font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 400; line-height: 150%; width: 100%; overflow-x: hidden; color: var(--primaryfontcolor);} 
 a, a:hover{ text-decoration: none;}
 main p{ color: var(--primaryfontcolor); text-align: justify; margin-bottom: 20px; line-height: 25px;}
 main > section, .top_footer{ padding:60px 0;}
@@ -25,7 +25,7 @@ p.back_button{ text-align:right; margin-top: 10px;}
 p.back_button a{ text-align:center; color:var(--primaryfontcolor);}
 /*Pagination*/
 .pagination, .page-link{ padding: 2px 8px; font-size:14px; border: 0; background: transparent; color:#666; }
-
+p.card-link{ margin-bottom: 0; line-height: auto; }
 .light_bg{
  background:#fefefe url("../images/upcomingevent_bg.jpg") bottom no-repeat; background-size: cover; padding:60px 0 !important; }
 
@@ -258,6 +258,7 @@ a.download_pdf_link  img{height: 30px !important;text-align: center;}
 
 
 /* Main Menu */
+.navbar-brand{ padding:0;}
 .navbar-brand h1{ font-size: 36px;
     font-weight: bold;
     color: #000;
@@ -505,7 +506,7 @@ background:#fefefe url("../images/upcomingevent_bg.jpg") bottom no-repeat; backg
 .event_card .card-body{ padding: 20px 20px 0; color: #8B8B8B;} 
 .event_card .card img { border-radius: 0px; height: 180px;}
 .event_card .card .card-link a{color: var(--color_yellow); background-color: #F1F1F1; padding: 10px 25px 10px 20px; display: block; width: 130px; clip-path: polygon(0% 0%, 80% 0, 100% 100%, 0% 100%); font-size:15px; font-weight: 600; transition: all 0.3s; }
-.event_card .card p.card-link{ margin-bottom: 0; }
+.event_card .card p.card-link{ margin-bottom: 0; line-height: auto; }
 .event_card .card:hover{ transition: all 0.3s; }
 .event_card .card:hover .card-link a{color: var(--color_yellow); background-color: #F3F3F3; width: 100%; clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%); text-align: center}
 
@@ -552,29 +553,26 @@ background:#fefefe url("../images/upcomingevent_bg.jpg") bottom no-repeat; backg
 /*Event Detail Page*/
 .shadow_box{ box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; padding: 20px; background-color: var(--color_white);  border-radius:5px; margin: 40px auto;}
 .shadow_box h4{ font-size: 18px; margin: 20px 0 8px; text-transform: uppercase;}
-.shadow_box h5{ font-size: 15px; margin-bottom: 10px;}
+.shadow_box h5{ font-size: 15px; margin-bottom: 10px; margin-top:0;}
 .shadow_box hr.seperator{ margin: 12px 0; }
 .event_top_img{ max-height:400px; background-size:cover; margin: 40px auto 0; border:solid 2px #f2f2f2; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; width: 100%; }
 .icon_venue,.icon_date,.icon_time, .icon_partner{ color: var(--color_yellow); font-size: 18px; margin-right: 10px;}
 .badge_eventcity{background: var(--color_green); font-size: 17px;}
 .eventdetail_box{border:solid 1px #f2f2f2;}
 .venue_location{ background-color: #FFF7ED; padding: 15px; font-size: 13px; border:solid 1px var(--color_yellow);}
+.venue_location p{ margin-bottom:0;}
 .venue_description{padding: 0 30px 0 0; text-align: justify; }
-h6.event_name{ position:absolute; top:80px; background-color: rgba(0,0,0,.6); left:-10px; padding: 10px 50px 10px 20px; color: var(--color_white);   }
+h6.event_name{ position:absolute; top:80px; background-color: rgba(0,0,0,.6); left:-10px; padding: 10px 50px 10px 20px; color: var(--color_white); clip-path: polygon(0% 0%, 80% 0, 100% 100%, 0% 100%);  }
 
 /*Important Link Section*/
 #importantLink_section {  background:var(--bg_darkblue) url(../images/importantLink_sectionBG.png) top right no-repeat; padding: 60px; }
 #importantLink_section p{ color: var(--color_white)}
 #importantLink_section h3.sub_heading{ color:var(--color_yellow); }
-#importantLink_section .card{ padding: 0px; margin:10px 0; background: #5a5a5a; border:0; border-left: 4px solid #D8D8D8;  background-color: rgb(255, 255, 255);  box-shadow: 0.908px 1.782px 12px 0px rgba(16, 16, 16, 0.03); display: inline-block; width: 100%; margin-bottom: 20px;
+#importantLink_section .card{ padding: 0px;  margin: 10px 0; background: #5a5a5a; border:0; border-left: 4px solid #D8D8D8;  background-color: rgb(255, 255, 255);  box-shadow: 0.908px 1.782px 12px 0px rgba(16, 16, 16, 0.03); display: inline-block; width: 100%; min-height: 100px;height: auto; 
   color: var(--color_white);
   text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.15rem;
   transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1; border-radius:0; margin:0; }
+  z-index: 1; border-radius:0;}
 #importantLink_section .card a{ text-decoration: none; font-weight:bold}
 #importantLink_section .card .card-title {font-size: 15px; color: #023047; line-height: 160%; text-align: left; text-transform: capitalize; margin: 0; font-family: 'Lato', sans-serif !important; vertical-align: middle;}
 #importantLink_section .card:after {
@@ -642,9 +640,9 @@ h6.event_name{ position:absolute; top:80px; background-color: rgba(0,0,0,.6); le
 #services_section .green_box .card-link a{color:var(--color_green);}
 #services_section h2{ color:var(--color_white); position: relative; top:35%; text-align: center;FONT-SIZE:32px; }
  #services_section .infra_knowledge, #services_section .infra_financing, #services_section .capacity_building,#services_section .finance_Secretariat {height: 454px;background: url("../images/infra_knowledge.jpg") no-repeat; background-size:cover; border-top:solid 8px; margin: 0; padding: 0;}
- #services_section .infra_knowledge{ background: url("../images/infra_knowledge.jpg") no-repeat; border-top-color:var(--color_green);}
-#services_section .infra_financing{ background: url("../images/infra_financing.jpg") no-repeat; border-top-color:var(--color_yellow);}
-#services_section .capacity_building{ background: url("../images/capacity_building.jpg") no-repeat;border-top-color:var(--color_red);}
+ #services_section .infra_knowledge{ background: url("../images/Knowledge Resources 1.png") no-repeat; border-top-color:var(--color_green);}	
+#services_section .infra_financing{ background: url("../images/Infra Financing 1.png") no-repeat; border-top-color:var(--color_yellow);}	
+#services_section .capacity_building{ background: url("../images/Capacity Building 1.png") no-repeat;border-top-color:var(--color_red);}
 #services_section .finance_Secretariat{ background: url("../images/finance_Secretariat.jpg") no-repeat; border-top-color:var(--color_blue); }
 
 
@@ -753,7 +751,7 @@ img.img-thumbnail{ width: 600px !important; height: 200px; border-radius: 0; bor
 
 
 /*HML PAGE*/
-.subsector_list li{ margin-left: 6%; color: #222222;}
+.subsector_list li{ margin-left: 6%; color: #555;}
 
 /*Contact Us*/
 .form_email, .form_comment{ margin-top: 20px;}
@@ -1029,6 +1027,3 @@ footer .navbar-brand h6{font-size:12px; }
     
     }
 
-.venue_location p{ margin-bottom:0;}
-p.card-link{ margin-bottom:0;}
-.shadow_box h5{ margin-top: 0;}
