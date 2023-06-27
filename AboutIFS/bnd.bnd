@@ -1,0 +1,4 @@
+Bundle-Name: AboutIFS
+Bundle-SymbolicName: com.kpmg.AboutIFS
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.AboutIFS.constants
