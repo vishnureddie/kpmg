@@ -18,7 +18,21 @@ VALUES (uuid_generate_v4(), 8, 8, 'Energy Unit', current_timestamp, 1, current_t
 INSERT INTO public.dea_structureofifs (uuid_, ifsid, parentid, secretariatname, createddate, createdby, modifieddate, modifiedby)
 VALUES (uuid_generate_v4(), 9, 9, 'NIP/NMP Faciliation Unit (NFU)', current_timestamp, 1, current_timestamp, 1);
 
-
+  <entity local-service="true" name="Aboutus" remote-service="true" uuid="true" table="dea_aboutus">
+		<column name="aboutusId" primary="true" type="long" />
+		<column name="mainDescription" type="String" />
+		<column name="hi_mainDescription" type="String" />
+		<column name="keyDescription" type="String" />
+		<column name="hi_keyDescription" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
 
 
       <entity local-service="true" name="StructureofIFS" remote-service="true" uuid="true" table="dea_structureofIFS">
