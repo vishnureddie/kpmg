@@ -1,3 +1,12 @@
+keyDescription =abt.getKeyDescription(); 
+				      		mainDescription=abt.getMainDescription(); 
+ 
+				      		 if(languageId.equals("hi_IN")){
+				      			keyDescription =abt.getKeyDescription(); 
+					      		mainDescription=abt.getMainDescription(); 
+				      		 }
+
+
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 INSERT INTO public.dea_structureofifs (uuid_, ifsid, parentid, secretariatname, createddate, createdby, modifieddate, modifiedby)
 VALUES (uuid_generate_v4(), 1, 1, 'Infrastructure Finance Secretariat', current_timestamp, 1, current_timestamp, 1);
