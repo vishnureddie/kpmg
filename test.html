@@ -1,3 +1,16 @@
+create table dea_harmonizedmasterlist (
+	uuid_ VARCHAR(75) null,
+	hmlId LONG not null primary key,
+	hmlDescription VARCHAR(75) null,
+	hi_hmlDescription VARCHAR(75) null,
+	createdDate DATE null,
+	createdBy LONG,
+	modifiedDate DATE null,
+	modifiedBy LONG
+);
+
+
+
 keyDescription =abt.getKeyDescription(); 
 				      		mainDescription=abt.getMainDescription(); 
  
