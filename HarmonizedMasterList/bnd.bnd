@@ -1,0 +1,4 @@
+Bundle-Name: HarmonizedMasterList
+Bundle-SymbolicName: com.kpmg.HarmonizedMasterList
+Bundle-Version: 1.0.0
+Export-Package: com.kpmg.HarmonizedMasterList.constants
