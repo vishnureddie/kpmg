@@ -1,3 +1,41 @@
+
+ <entity local-service="true" name="HmlMainDescription" remote-service="true" uuid="true" table="dea_hmlmaindescription">
+		<column name="hmlId" primary="true" type="long" />
+		<column name="hmlmainDescription" type="String" />
+		<column name="hi_hmlmainDescription" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+    
+    <entity local-service="true" name="HmlTimeline" remote-service="true" uuid="true" table="dea_hmltimeline">
+		<column name="hmlTimelineId" primary="true" type="long" />
+		<column name="year" type="String" />
+		<column name="month" type="String" />
+		<column name="hmlDescription" type="String" />
+		<column name="hi_hmlDescription" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+
+
+
+
+
+
+
+
+
 create table dea_hmlmaindescription (
 	uuid_ VARCHAR(75) null,
 	hmlId LONG not null primary key,
