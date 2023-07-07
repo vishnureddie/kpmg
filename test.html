@@ -1,3 +1,18 @@
+<entity local-service="true" name="HmlCategoryList" remote-service="true" uuid="true" table="dea_hmlcategorylist">
+		<column name="hmlCategoryListId" primary="true" type="long" />
+		<column name="catId" type="long" />
+		<column name="subcatId"  type="long" />
+		<column name="hmlCategoryInfo" type="String" />
+		<column name="hi_hmlCategoryInfo" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+
 <entity local-service="true" name="YouTubeLinks" remote-service="true" uuid="true" table="dea_youtube_links">
 <column name="linkId" primary="true" type="long" />
 <column name="eventId" type="long" />
