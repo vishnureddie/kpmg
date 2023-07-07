@@ -1,3 +1,20 @@
+<entity local-service="true" name="YouTubeLinks" remote-service="true" uuid="true" table="dea_youtube_links">
+<column name="linkId" primary="true" type="long" />
+<column name="eventId" type="long" />
+<column name="youtubelink" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+<finder name="eventId" return-type="Collection">
+<finder-column name="eventId" />
+</finder>
+</entity>
+
+
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 INSERT INTO public.dea_infraknowledgecategory (uuid_, catid, categoryname, createddate, createdby, modifieddate, modifiedby)
 VALUES (uuid_generate_v4(), 1, 'All', current_timestamp, 1, current_timestamp, 1);
