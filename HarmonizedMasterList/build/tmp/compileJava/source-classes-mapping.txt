@@ -1,4 +1,0 @@
-com/kpmg/HarmonizedMasterList/constants/HarmonizedMasterListPortletKeys.java
- com.kpmg.HarmonizedMasterList.constants.HarmonizedMasterListPortletKeys
-com/kpmg/HarmonizedMasterList/portlet/HarmonizedMasterListPortlet.java
- com.kpmg.HarmonizedMasterList.portlet.HarmonizedMasterListPortlet
