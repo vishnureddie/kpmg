@@ -1,0 +1,147 @@
+
+/*****************************Tenders Page CSS start*************************************/
+ 
+.tenderspage-main .tendersdata-table h1, .tenderspage-main h1.tendertext-main {
+	color: #001A46;
+	text-align: center;
+	margin-bottom: 30px;
+	
+}
+
+.tenderspage-main .tendersdata-table h1 span, .tenderspage-main h1.tendertext-main span {
+	border-bottom: 10px solid #FF6F0C;
+} 
+
+
+.tenderspage-main .tendersdata-table div#tenderTable_filter, .tenderspage-main .tendersdata-table div#tenderTable_paginate {
+    float: right;
+}
+
+.tenderspage-main .tendersdata-table .tenders-table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.tenders-table thead tr {
+	    background-color: #04537A;
+}
+.tenders-table thead tr th{
+	    color: #ffffff;
+}
+
+.tenderspage-main .tendersdata-table div#tenderTable_paginate .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #04537A;
+    border-color: #04537A;
+}
+
+.tenderspage-main .tendersdata-table div#tenderTable_paginate .page-item .page-link {
+	color: #04537A;
+}
+
+/*.tenderspage-main .tender-form {
+	width: 500px;
+	margin: 0px auto;
+}*/
+
+.tenderspage-main .tender-form  .btn-submit{
+	background-color: #83C127;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	width: 32%;
+}
+
+.vedioGallery-sec .imp-txt {
+	color: #00050E;
+	text-align: center;
+	margin-bottom: 60px;
+	text-transform: uppercase;
+}
+
+.vedioGallery-sec {
+ 	padding: 40px 0px 0px;
+ }
+
+
+.vedioGallery-sec .imp-txt  span {
+	border-bottom: 10px solid #FF6F0C;
+}
+
+button.btn-createTender {
+	background-color: #83C127;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 8px;
+	
+}
+.tendersdata-table thead tr th {
+    color: #fff;
+    background-color: #04537A;
+    vertical-align: middle;
+}
+
+
+
+.tendersdata-table .btn.btn-primary.m-0 {
+	background-color: #04537A;
+    color: #fff;
+
+}
+.mycardImgModal .modal-dialog .modal-body .card .card-img-top {
+    height: 250px;
+    width: 100%;
+    cursor: default;
+}
+.font-bold {
+    font-weight: bold;
+}
+table td{vertical-align: middle;}
+.table thead th {
+    vertical-align: middle;
+}
+td.table-cell.first {
+    text-align: center;
+}
+.table {
+    text-align: center;
+}
+td.table-cell.last {
+    width: 140px;
+}
+.table>tbody>tr>td {vertical-align: middle;}
+.discptwdth{width: 190px;}
+.eventname{width: 190px;}
+.Evntnameinhidwdth{width: 190px;}
+.tooltipbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltipbox .tooltiptextdis {
+  visibility: hidden;
+  width: 315px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 2px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltipbox:hover .tooltiptextdis {
+  visibility: visible;
+}
+.lfr-search-container {
+    margin-top: 1.5em;
+    overflow: visible !important;
+}
+.eventdates {
+    font-weight: 700;
+    color: #04537A;
+}
+.page-wrapper .page-content {
+    overflow-x: visible;
+}
+/*****************************Tenders Page CSS End**************************************/
