@@ -1,3 +1,10 @@
+OFFLINETRAINING=ऑफ़लाइन प्रशिक्षण
+ONLINETRAINING=ऑनलाइन प्रशिक्षण
+
+OFFLINETRAINING=OFFLINE TRAINING
+ONLINETRAINING=ONLINE TRAINING
+
+
 Home=होम
 ContactUs=हमसे संपर्क करें
 PostAddress=डाक का पता
