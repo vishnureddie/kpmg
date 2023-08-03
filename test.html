@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("myForm");
+  const submitButton = document.getElementById("submitButton");
+
+  // Attach event listener to the form
+  form.addEventListener("keypress", function(event) {
+    // Check if the Enter key is pressed (key code 13)
+    if (event.keyCode === 13 || event.which === 13) {
+      // Trigger the onclick event of the submitButton
+      submitButton.click();
+    }
+  });
+});
+
+
 Home- होम
 Infrastructure In India  - इंफ्रास्ट्रक्चर इन इंडिया
 Initiative by infrastructure finance secretariat, department of economic affairs, ministry of finance - 
