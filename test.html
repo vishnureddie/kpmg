@@ -1,3 +1,39 @@
+<entity local-service="true" name="HmlCategory" remote-service="true" uuid="true" table="dea_hmlCategory">
+<column name="catId" primary="true" type="long" />
+<column name="CategoryName" type="String" />
+<column name="hi_CategoryName" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+    
+    <entity local-service="true" name="HmlSubCategory" remote-service="true" uuid="true" table="dea_hmlsubcategory">
+		<column name="hmlSubCategoryId" primary="true" type="long" />
+		<column name="hmlCatId" type="long" />
+		<column name="subCategoryName" type="String" />
+		<column name="hi_SubCategoryName" type="String" />
+		<column name="CategoryInfo" type="String" />
+		<column name="hi_CategoryInfo" type="String" />
+		<column  name="status" type="int"></column>
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+		<finder name="hmlCatId" return-type="Collection">
+			<finder-column name="hmlCatId" />
+		</finder>
+    </entity>
+
+
+
+
 javax.portlet.title.com_kpmg_Contactus_ContactusPortlet=Contactus
 contactus.caption=Hello from Contactus!
 email.errorMsg.missing=Please enter valid email Address
