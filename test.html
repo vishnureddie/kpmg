@@ -1,3 +1,28 @@
+		 <liferay-ui:search-container-column-text cssClass="<%= String.valueOf(keyPeopleId) %>" name="<%=thSno %>">	 
+		<%if(role.equalsIgnoreCase("Departmentuser")){    %> 	
+	    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>	  
+	    <% }%>
+	    <%= String.valueOf(sNo++) %></liferay-ui:search-container-column-text>
+ 
+	    
+	    <liferay-ui:search-container-column-text name="Employee Name" value="<%=name %>" /> 
+		 <liferay-ui:search-container-column-text name="Phone" value="<%=mobile %>" />
+		<liferay-ui:search-container-column-text name="Email" value="<%=email %>" />
+		<%if(role.equalsIgnoreCase("Departmentuser")){ %>
+		<liferay-ui:search-container-column-text name="Status" value="<%=status %>" />
+		<%} %>
+		<%if(role.equalsIgnoreCase("Departmentuser")){ %>
+		<liferay-ui:search-container-column-text name="Manage" cssClass="managewdth">
+		<div>
+	 
+			<a class="btn btn-primary m-0 hotooltip" onClick="updateRecord('<%=keyPeopleId %>');"><i class="fas fa-edit editicon"><span class="hotooltiptext"></span></i></a> 
+			<%if(status.equals("Y")) { %><a class="btn btn-primary m-0 hotooltip" onClick="return deleteRecord('<%=keyPeopleId %>');"> <i class="fas fa-trash-alt deleteicon"><span class="hotooltiptext"></span></i></a>
+			<%} %>
+		</div>
+		</liferay-ui:search-container-column-text>
+		<%} %>
+
+
 <entity local-service="true" name="HmlCategory" remote-service="true" uuid="true" table="dea_hmlCategory">
 <column name="catId" primary="true" type="long" />
 <column name="CategoryName" type="String" />
