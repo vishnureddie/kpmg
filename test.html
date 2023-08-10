@@ -1,4 +1,24 @@
-		 <liferay-ui:search-container-column-text cssClass="<%= String.valueOf(keyPeopleId) %>" name="<%=thSno %>">	 
+<entity local-service="true" name="FAQ" remote-service="true" uuid="true" table="dea_FAQ">
+<column name="qId" primary="true" type="long" />
+<column name="question" type="String" /> 
+<column name="hi_question" type="String" /> 
+<column name="answer" type="String" />
+<column name="hi_answer" type="String" />
+<column name="status" type="int" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+
+
+
+
+<liferay-ui:search-container-column-text cssClass="<%= String.valueOf(keyPeopleId) %>" name="<%=thSno %>">	 
 		<%if(role.equalsIgnoreCase("Departmentuser")){    %> 	
 	    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>	  
 	    <% }%>
