@@ -1,3 +1,61 @@
+<section id="NIP_section">
+  <div class="container py-5">
+      <div class="row">
+ 
+         	
+         	<% 
+ 
+List<Infrafinancing> importantLinks=null;
+  try{
+	 // int size=ImportantLinksLocalServiceUtil.getImportantLinksCount();
+	  //importantLinks=ImportantLinksLocalServiceUtil.findBylanguageId(languageId, 0, ImportantLinksLocalServiceUtil.countBylanguageId(languageId));
+		 importantLinks =InfrafinancingLocalServiceUtil.getInfrafinancings(0, InfrafinancingLocalServiceUtil.getInfrafinancingsCount());
+  }
+  catch(Exception e){
+	  e.getMessage();
+  }
+       int z=1;
+  for(Infrafinancing importantLink:importantLinks){
+	  String fileUrl=""; 
+	  String title=importantLink.getTitle();
+	  String redirectLink =importantLink.getRedirectLink(); 
+	  String description= importantLink.getDescription();
+	  if(languageId.equals("hi_IN")){
+    		redirectLink =importantLink.getHi_redirectLink(); 
+    		description=importantLink.getHi_description();
+    		title=importantLink.getHi_title(); 
+		 }
+	  long fileEntryId=importantLink.getFileEntryId();
+	  if(fileEntryId!=0L){
+			try{
+				fileUrl =ReportsandInsightsPortlet.getFile(fileEntryId, themeDisplay.getScopeGroupId());	  
+			}
+			catch(Exception e){
+				
+			}
+	  }
+	  
+       %> 
+       
+			 <div class="col-lg-6 <%if(x==1){ %>margin_bottom_sm <%}%>">
+      <div class="row">
+        <h4 class="sub_heading text_white"><%=title %></h4>
+        <div class="col-lg-6 col-md-6 text-center"><img src="<%=fileUrl %>" class="img-fluid leftimage rounded" alt="About National Infrastructure Pipeline (NIP)"></div>
+        <div class="col-lg-6  col-md-6"> <p class="text_justify"><%=description %>  </p>
+        <a href="<%=redirectLink %>" class="white_btn  mt-4" target="_blank"><liferay-ui:message key="KNOWMORE"/></a></div>
+      </div>  
+    </div>
+			
+  
+<% z++; } %>
+
+          	
+ </div>
+	  </div>
+</section>
+
+
+
 javax.portlet.title.HomePacom_kpmg_homePvageNews_HomePageNewsPortlet=HomePageNewsModule
 homePageNews.Title=\u0939\u094B\u092E \u092A\u0947\u091C \u0938\u092E\u093E\u091A\u093E\u0930
 importantlinks.viewall=\u0938\u092D\u0940 \u0926\u0947\u0916\u0947\u0902
