@@ -2,7 +2,6 @@
   <div class="container py-5">
       <div class="row">
          	<% 
- 
 List<Infrafinancing> importantLinks=null;
   try{
 	 // int size=ImportantLinksLocalServiceUtil.getImportantLinksCount();
@@ -34,14 +33,16 @@ List<Infrafinancing> importantLinks=null;
 	  }
        %> 
 			 <div class="col-lg-4 <%if(x==1){ %>margin_bottom_sm <%}%>">
-          <h4 class="sub_heading text_white"><%=title %></h4>
-          <img src="<%=fileUrl %>" class="img-fluid mb-3" alt="About National Infrastructure Pipeline (NIP)">
-          <p class="text_justify"><%=description %>  </p>
-          <a href="<%=redirectLink %>" class="white_btn  mt-4" target="_blank"><liferay-ui:message key="KNOWMORE"/></a>
- 
+			 
+			 <div class="card h-100 ">
+		   	<div class="card-header"><h4 class="sub_heading text_white"><%=title %></h4>
+			<img src="<%=fileUrl %>" class="img-fluid mb-3" alt="About National Infrastructure Pipeline (NIP)"></div>
+			 <div class="card-body">
+                               <p class="text_justify"><%=description %> </p></div>
+			 <div class="card-footer"> <a href="<%=redirectLink %>" class="white_btn" target="_blank"> <liferay-ui:message key="KNOWMORE"/></a></div>  
+		   </div>
          </div>
 <% z++; } %>
-
  </div>
 	  </div>
 </section>
