@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.kpmg.citizenTables">
+	 <namespace>DEA</namespace>
+	     <entity local-service="true" name="CarouselImages" remote-service="true" uuid="true" table="dea_carouselImages">
+		<column name="carouselId" primary="true" type="long" />
+		<column name="title" type="String"></column>
+        <column name="hi_title" type="String"></column>
+        <column name="description" type="String"></column>
+        <column name="hi_description" type="String"></column>
+		<column name="fileEntryId" type="long" />
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" /> 
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+    
+      <entity local-service="true" name="CarouselTimer" remote-service="true" uuid="true" table="dea_carouselTimer">
+		<column name="timerId" primary="true" type="long" />
+		<column name="timer" type="long"></column>
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+    
+  <entity local-service="true" name="ImportantLinks" remote-service="true" uuid="true" table="dea_importantLinks">
+		<column name="importantLinkId" primary="true" type="long" />
+		<column name="title" type="String" />
+		<column name="redirectLink" type="String" />
+		<column name="hi_title" type="String" />
+		<column name="hi_redirectLink" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+    <entity local-service="true" name="QuickLinks" remote-service="true" uuid="true" table="dea_quickLinks">
+		<column name="quickLinkId" primary="true" type="long" />
+		<column name="title" type="String" />
+		<column name="redirectLink" type="String" />
+		<column name="hi_title" type="String" />
+		<column name="hi_redirectLink" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity> 
+ <entity local-service="true" name="Events" remote-service="true" uuid="true" table="dea_events">
+		<column name="eventId" primary="true" type="long" />
+		<column name="eventtype" type="String" /> 
+		<column name="title" type="String" /> 
+		<column name="description" type="String" /> 
+		<column name="hi_title" type="String" /> 
+		<column name="hi_description" type="String" />
+		<column name="location" type="String" />
+		<column name="venue" type="String" />
+		<column name="trainingpartner" type="String" />
+		<column name="trainingname" type="String" />
+		<column name="email" type="String" />
+		<column name="startDate" type="Date" />
+		<column name="startTime" type="String" />
+		<column name="endDate" type="Date" />
+		<column name="endTime" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="status" type="int" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+ 
+    <entity local-service="true" name="HomePageNews" remote-service="true" uuid="true" table="dea_homePageNews">
+		<column name="homePageNewsId" primary="true" type="long" />
+		<column name="title" type="String" />
+		<column name="redirectLink" type="String" />
+		<column name="hi_title" type="String" />
+		<column name="hi_redirectLink" type="String" />
+		<column name="cdate" type="Date" />
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+   <entity local-service="true" name="Infrafinancing" remote-service="true" uuid="true" table="dea_infrafinancing">
+		<column name="infrafinancingId" primary="true" type="long" />
+		<column name="title" type="String" />
+		<column name="redirectLink" type="String" />
+		<column name="hi_title" type="String" />
+		<column name="description" type="String"></column>
+        <column name="hi_description" type="String"></column>
+		<column name="hi_redirectLink" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+    <entity local-service="true" name="Infrafinancinghub" remote-service="true" uuid="true" table="dea_infrafinancinghub">
+		<column name="infrafinancingId" primary="true" type="long" />
+		<column name="name" type="String" />
+		<column name="hi_name" type="String" />
+		<column name="date" type="Date" />
+		<column name="fileEntryId" type="long" />
+		<column name="type" type="long" />
+		<column name="issuedby" type="String" />
+		<column name="hi_issuedby" type="String" />
+		<column name="viewurl" type="String" />
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+   
+   <entity local-service="true" name="InfraKnowledgeCategory" remote-service="true" uuid="true" table="dea_infraKnowledgeCategory">
+<column name="catId" primary="true" type="long" />
+<column name="CategoryName" type="String" />
+<column name="hi_CategoryName" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+<entity local-service="true" name="InfraKnowledgeSubCategory" remote-service="true" uuid="true" table="dea_infraKnowledgeSubCategory">
+<column name="subcatId" primary="true" type="long" />
+<column name="catId" type="long" />
+<column name="SubCategoryName" type="String" />
+<column name="hi_SubCategoryName" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+<entity local-service="true" name="Ministry" remote-service="true" uuid="true" table="dea_ministry">
+<column name="mId" primary="true" type="long" />
+<column name="subcatId"  type="long" />
+<column name="mName" type="String" />
+<column name="hi_mName" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+<entity local-service="true" name="InfraKnowledge" remote-service="true" uuid="true" table="dea_infraKnowledge">
+<column name="infraId" primary="true" type="long" />
+<column name="cateId" type="long" />
+<column name="SubCatId" type="long" />
+<column name="type" type="String" />
+<column name="documentType" type="String" />
+<column name="ministry" type="String" />
+<column name="headingText" type="String" />
+<column name="hi_headingText" type="String" />
+<column name="description" type="String" />
+<column name="hi_description" type="String" />
+<column name="thumbnailfileEntryId" type="long" />
+<column name="fileEntryId" type="long" />
+<column type="String" name="viewurl"></column>
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+   
+
+ <entity local-service="true" name="GalleryDocuments" remote-service="true" uuid="true" table="dea_gallery_documents">
+		<column name="documentId" primary="true" type="long" />
+		<column name="eventId" type="long" />
+		<column name="documentTypeId" type="long" />
+		<column name="fileEntryId" type="long" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+		<finder name="eventId" return-type="Collection">
+			<finder-column name="eventId" />
+		</finder>
+    </entity>
+     <entity local-service="true" name="YouTubeLinks" remote-service="true" uuid="true" table="dea_youtube_links">
+		<column name="linkId" primary="true" type="long" />
+		<column name="eventId" type="long" />
+		<column name="youtubelink" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+		<finder name="eventId" return-type="Collection">
+			<finder-column name="eventId" />
+		</finder>
+    </entity>
+    
+    <entity local-service="true" name="Citizens" remote-service="true" uuid="true" table="dea_citizens">
+		<column name="entryId" primary="true" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="mobileNumber" type="String" />
+		<column name="address" type="String" />
+		<column name="dateofBirth" type="Date" />
+		<column name="age" type="int" />
+		<column name="gender" type="int" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+		<!-- Finder methods -->
+       <finder name="userId" return-type="Citizens">
+			<finder-column name="userId" />
+		</finder>
+		 <finder name="mobileNumber" return-type="Citizens">
+			<finder-column name="mobileNumber" />
+		</finder>
+	</entity>
+	<entity local-service="true" name="CitizenRegisterOtp" remote-service="true" uuid="true" table="jhansi_otp">
+		<column name="otpId" primary="true" type="long" />
+		<column name="mobileNumber" type="String" />
+		<column name="emailAddress" type="String" />
+		<column name="requestType" type="int" />
+		<column name="otp" type="int" /> 
+		<column name="verified" type="boolean" />
+		<column name="smsCount" type="int" />
+		<column name="response" type="String" />
+		<column name="status" type="String" />
+		<column name="code" type="String" />
+		<column name="reason" type="String" />
+		<column name="clientSMSId" type="String" />
+		<column name="messageId" type="String" />
+		<column name="otpAttempts" type="int" />
+		<column name="modifiedDate" type="Date" />
+		<finder name="MobileNumber" return-type="CitizenRegisterOtp" unique="true">
+			<finder-column name="mobileNumber" />
+		</finder>
+		<finder name="MobileNumberAndRequestType" return-type="CitizenRegisterOtp" unique="true">
+			<finder-column name="mobileNumber" />
+			<finder-column name="requestType" />
+		</finder>
+    </entity>
+      <entity local-service="true" name="ReportsandInsights" remote-service="true" uuid="true" table="dea_reportandInsights">
+		<column name="reportId" primary="true" type="long" />
+		<column name="title" type="String" />
+		<column name="redirectLink" type="String" />
+		<column name="hi_title" type="String" />
+		<column name="hi_redirectLink" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="fileEntryId1" type="long" />
+		<column name="status" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+</entity>
+
+
+
+ <entity local-service="true" name="HmlMainDescription" remote-service="true" uuid="true" table="dea_hmlmaindescription">
+		<column name="hmlId" primary="true" type="long" />
+		<column name="hmlmainDescription" type="String" />
+		<column name="hi_hmlmainDescription" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+    
+    <entity local-service="true" name="HmlTimeline" remote-service="true" uuid="true" table="dea_hmltimeline">
+		<column name="hmlTimelineId" primary="true" type="long" />
+		<column name="year" type="String" />
+		<column name="month" type="String" />
+		<column name="hmlDescription" type="String" />
+		<column name="hi_hmlDescription" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+    
+<entity local-service="true" name="HmlCategory" remote-service="true" uuid="true" table="dea_hmlCategory">
+<column name="catId" primary="true" type="long" />
+<column name="CategoryName" type="String" />
+<column name="hi_CategoryName" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+    
+    <entity local-service="true" name="HmlSubCategory" remote-service="true" uuid="true" table="dea_hmlsubcategory">
+		<column name="hmlSubCategoryId" primary="true" type="long" />
+		<column name="hmlCatId" type="long" />
+		<column name="subCategoryName" type="String" />
+		<column name="hi_SubCategoryName" type="String" />
+		<column name="CategoryInfo" type="String" />
+		<column name="hi_CategoryInfo" type="String" />
+		<column  name="status" type="int"></column>
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+		<finder name="hmlCatId" return-type="Collection">
+			<finder-column name="hmlCatId" />
+		</finder>
+    </entity>
+
+ <entity local-service="true" name="Aboutus" remote-service="true" uuid="true" table="dea_aboutus">
+		<column name="aboutusId" primary="true" type="long" />
+		<column name="mainDescription" type="String" />
+		<column name="hi_mainDescription" type="String" />
+		<column name="keyDescription" type="String" />
+		<column name="hi_keyDescription" type="String" />
+		<column name="fileEntryId" type="long" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+    </entity>
+
+
+      <entity local-service="true" name="StructureofIFS" remote-service="true" uuid="true" table="dea_structureofIFS">
+<column name="ifsId" primary="true" type="long" />
+<column name="parentId" type="long" />
+<column name="secretariatName" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+<entity local-service="true" name="IFSKeyOfficers" remote-service="true" uuid="true" table="dea_IFSKeyOfficers">
+<column name="keyofficerId" primary="true" type="long" />
+<column name="ifsId" type="long" />
+<column name="name" type="String" />
+<column name="designation" type="String" />
+<column name="email" type="String" />
+<column name="landlineNo" type="String" />
+<column name="intercom" type="String" />
+<column name="keyPeopleOrder" type="int"></column>
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="asc">
+	<order-column name="keyPeopleOrder" />
+</order>
+<finder name="ifsId" return-type="Collection">
+			<finder-column name="ifsId" />
+		</finder>
+</entity>
+
+<entity local-service="true" name="FeedbackValidation" remote-service="true" uuid="true" table="dea_feedbackValidation">
+		<column name="feedbackValidationId" primary="true" type="long" />
+		<column name="email" type="String" />
+		<column name="otp" type="String" />
+		<column name="verified" type="boolean" /> 
+		<column name="sendMailCount" type="int" />
+		<column name="otpAttempts" type="int" />
+		<column name="feedback" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<finder name="email" return-type="FeedbackValidation" unique="true">
+			<finder-column name="email" />
+		</finder>
+		<finder name="emailAndOtp" return-type="FeedbackValidation" unique="true">
+			<finder-column name="email" />
+			<finder-column name="otp" />
+		</finder>
+    </entity>
+<entity local-service="true" name="ContactAddress" remote-service="true" uuid="true" table="dea_conctactAddress">
+		<column name="addressid" primary="true" type="long" />
+		<column name="paddress" type="String" />
+		<column name="phonenumber" type="String" />
+		<column name="email" type="String" />
+		<column name="feedBackEmail" type="String" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+    </entity>
+
+ <entity local-service="true" name="forgotPassword" remote-service="true" uuid="true" table="dea_forgotPassword">
+		<column name="forgotPasswordId" primary="true" type="long" />
+		<column name="email" type="String" />
+		<column name="otp" type="String" />
+		<column name="verified" type="boolean" /> 
+		<column name="sendMailCount" type="int" />
+		<column name="otpAttempts" type="int" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<finder return-type="forgotPassword" name="email"  unique="true">
+			<finder-column name="email" />
+		</finder>
+		<finder name="emailAndOtp" return-type="forgotPassword" unique="true">
+			<finder-column name="email" />
+			<finder-column name="otp" />
+		</finder>
+</entity>
+
+ <entity local-service="true" name="HolidaysList" remote-service="true" uuid="true" table="dea_holidayslist">
+		<column name="hlId" primary="true" type="long" />
+		<column name="title" type="String" /> 
+		<column name="hi_title" type="String" /> 
+		<column name="color" type="String" />
+		<column name="startDate" type="Date" />
+		<column name="status" type="int" />
+		<column name="createdDate" type="Date" />
+		<column name="createdBy" type="long" />
+		<column name="modifiedDate" type="Date" />
+		<column name="modifiedBy" type="long" />
+		<order by="desc">
+			<order-column name="createdDate" />
+		</order>
+ </entity>
+ 
+ <entity local-service="true" name="FAQ" remote-service="true" uuid="true" table="dea_FAQ">
+<column name="qId" primary="true" type="long" />
+<column name="question" type="String" /> 
+<column name="hi_question" type="String" /> 
+<column name="answer" type="String" />
+<column name="hi_answer" type="String" />
+<column name="status" type="int" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+<entity local-service="true" name="Sitemap" remote-service="true" uuid="true" table="dea_sitemap">
+<column name="sitemapId" primary="true" type="long" />
+<column name="title" type="String" />
+<column name="redirectLink" type="String" />
+<column name="hi_title" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+  <entity name="Visitor" remote-service="true" local-service="true" uuid="true" table="dea_Visitor">
+        <column name="visitorId" type="long" primary="true" />
+        <column name="visitorCount" type="long" />
+    </entity>
+
+<entity local-service="true" name="KPI" remote-service="true" uuid="true" table="dea_kpi">
+<column name="kpiId" primary="true" type="long" />
+<column name="title" type="String" />
+<column name="kpiCount" type="long" />
+<column name="type" type="String" />
+<column name="hi_title" type="String" />
+<column name="createdDate" type="Date" />
+<column name="createdBy" type="long" />
+<column name="modifiedDate" type="Date" />
+<column name="modifiedBy" type="long" />
+<order by="desc">
+<order-column name="createdDate" />
+</order>
+</entity>
+
+</service-builder>
+
