@@ -1,4 +1,44 @@
-					<img src="<%if(fileUrl.length()>0){ %>   <%=fileUrl %> <%} else{ %><%=request.getContextPath()%>/images/noEvent.png<%} %>" class="card-img-top" alt="...">
+In Liferay, roles and their associated information are stored in the database. Liferay uses its database to persistently store data, including details about users, roles, permissions, and other portal-related information.
+
+The specific tables where role information is stored depend on the version of Liferay and its underlying database schema. Generally, you can find role-related data in tables with names like "Roles_" followed by a unique identifier for the portal instance. For example, in the default Liferay schema, you might find tables like "Roles_" and "ResourcePermission" storing role and permission data.
+
+Keep in mind that direct manipulation of the database is generally discouraged, as it can lead to data inconsistencies and unexpected behavior. It's recommended to use Liferay's API and Control Panel for managing roles and permissions to ensure data integrity and consistency.
+
+
+
+
+User
+How roles triggered in liferay
+
+ChatGPT
+In Liferay, roles are typically triggered or invoked when a user interacts with the portal. The roles determine the user's permissions and access to various resources within the portal. Here's how roles are commonly triggered:
+
+User Login: When a user logs into the Liferay portal, their assigned roles are activated. The permissions associated with these roles determine what actions the user can perform and what resources they can access.
+
+Page Access: Access to specific pages or portlets may be restricted based on the roles assigned to the user. When a user tries to access a certain page or portlet, Liferay checks their roles to determine if they have the necessary permissions.
+
+Resource Access: Roles are often associated with specific resources, such as documents, folders, or custom entities. When a user attempts to interact with these resources, their assigned roles dictate whether they have the right to view, edit, delete, etc.
+
+API Calls: When developers create custom portlets or extensions that interact with Liferay's API, they can check for roles to enforce specific business logic or security measures. This is often done programmatically in Java code.
+
+Workflow Actions: If workflows are implemented in Liferay for certain content, roles can be used to define who has the authority to approve, reject, or modify content during the workflow process.
+
+Roles in Liferay are dynamic and flexible, allowing administrators to define fine-grained permissions based on the needs of their portal. The triggering of roles is closely tied to user interactions and the security checks performed by Liferay to ensure that users have the appropriate permissions for their actions.
+
+
+
+
+User
+If I created account in website created by liferay in which role I will be assigned to
+
+ChatGPT
+When you create an account on a website created with Liferay, the default role assigned to your account depends on the configuration set by the Liferay portal administrator. However, commonly, new users are initially assigned the "User" role. This role typically provides basic permissions for accessing and interacting with the portal.
+
+The "User" role usually includes permissions for actions like logging in, viewing public content, and participating in basic site activities. Keep in mind that specific roles and their permissions can vary depending on how the Liferay portal has been configured by the administrator.
+
+As a user, you may be able to view and edit your role assignments through the portal's user interface, allowing you to be part of different user groups or roles with varying levels of access and capabilities.
+
+If you're unsure about the roles assigned to your account on a specific Liferay portal, you can check with the portal administrator or refer to the user account settings and roles section in the portal interface if available.					<img src="<%if(fileUrl.length()>0){ %>   <%=fileUrl %> <%} else{ %><%=request.getContextPath()%>/images/noEvent.png<%} %>" class="card-img-top" alt="...">
 					<div class="card-body">
 
 
