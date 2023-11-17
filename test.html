@@ -1,3 +1,34 @@
+Liferay provides several options for user authentication. Here's a brief overview of how you can implement user authentication in Liferay:
+
+    Built-in Authentication:
+        Liferay comes with built-in authentication mechanisms, such as email address and password authentication. When users register or log in, Liferay automatically manages their credentials.
+
+    LDAP Authentication:
+        Liferay supports LDAP (Lightweight Directory Access Protocol) authentication, allowing you to integrate Liferay with existing LDAP directories. This is useful in enterprise environments where user credentials are centrally managed.
+
+    Single Sign-On (SSO):
+        Liferay supports Single Sign-On solutions like CAS (Central Authentication Service) and SAML (Security Assertion Markup Language). This allows users to log in once and access multiple applications without needing to log in again.
+
+    OAuth:
+        Liferay supports OAuth for authentication, which is useful when you want to allow third-party applications to access your Liferay resources on behalf of users. OAuth can be configured in Liferay, and you can define client applications with specific permissions.
+
+
+    Token-Based Authentication:
+        You can implement token-based authentication in Liferay by using JSON Web Tokens (JWT) or other token-based mechanisms. This involves issuing a token to authenticated users, and subsequent requests include this token for authentication.
+
+To limit the API to fetch details only for the user who is currently logged in, you need to obtain the user ID of the currently logged-in user.
+
+
+you can use the following code to get the user ID:
+long loggedInUserId = PortalUtil.getUserId(request);
+
+
+
+
+
+
+
+
 In Liferay, roles and their associated information are stored in the database. Liferay uses its database to persistently store data, including details about users, roles, permissions, and other portal-related information.
 
 The specific tables where role information is stored depend on the version of Liferay and its underlying database schema. Generally, you can find role-related data in tables with names like "Roles_" followed by a unique identifier for the portal instance. For example, in the default Liferay schema, you might find tables like "Roles_" and "ResourcePermission" storing role and permission data.
