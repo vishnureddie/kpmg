@@ -1,0 +1,181 @@
+
+<div class="tenderspage-main my-5">
+    <div class="container">
+ 
+      <h3 class="citizensideheaing"><b>Booking Details :</b></h3>
+<div class="tender-form">
+ <aui:form action="" method="post" name="fm">
+ 
+ 	<div class="row">
+ 	
+	       <div class="col-md-6">
+			 <div class="form-group" id="Other-div" style="display:none;">
+	           <aui:input type="text" label="Name" onkeypress="return ((event.charCode > 64 && 
+event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode > 47 && event.charCode < 58) || event.charCode == 0 || event.charCode == 32)"   cssClass="form-control">
+	           
+	          <aui:validator name="custom" errorMessage="Please remove special characters.">
+					function (val, fieldNode, ruleValue) {
+						var returnValue = true;
+						var iChars = "/{}'\":;=<>$";
+						   for (var i = 0; i < val.length; i++) {
+								if (iChars.indexOf(val.charAt(i)) != -1) {    
+								 returnValue = false;
+								}
+							}
+							if(val.includes("&lt;") || val.includes("&gt;") || val.includes("&apos;") || val.includes("&quot;") ||val.includes("&QUOT;") ||val.includes("&equals;")){
+							   returnValue = false;
+							}
+						return returnValue;
+					}
+				 </aui:validator>
+	          </aui:input>
+	        </div>
+	        
+	         <div class="form-group" id="Other-div" style="display:none;">
+	           <aui:input type="text" label="Email"  cssClass="form-control">
+	           <aui:validator name="required" />
+	           <aui:validator name="email" />
+	          </aui:input>
+	        </div>
+	       </div>
+
+	         
+	       <div class="col-md-6">
+	        <div class="form-group" id="Other-div" style="display:none;">
+	           <aui:input type="text" label="Mobile No"  cssClass="form-control">
+	           <aui:validator name="required" />
+	           <aui:validator name="number" />
+	          </aui:input>
+	        </div>
+	        
+	        <div class="form-group" id="Other-div" style="display:none;">
+	           <aui:input type="Date" label="Date of Booking"  cssClass="form-control">
+	           <aui:validator name="required" />
+	          </aui:input>
+	        </div>
+
+			 </div>
+	</div>
+ 
+ 
+ 
+	<div class="row one">
+	       <div class="col-md-4">
+			 <div class="form-group" id="Other-div" style="display:none;">
+	          <label for="students0-5">0-5 years:</label>  
+	          <aui:input type="number" value="0" id="nonStudents0-5" name="nonStudents0-5" cssClass="form-control"></aui:input>
+	        </div>
+	       </div>
+	       
+	       <div class="col-md-4">
+	     <aui:input type="number" value="0" id="students0-5" name="students0-5"  cssClass="form-control"></aui:input>
+	         </div>
+	         
+	       <div class="col-md-4">
+	        
+			 </div>
+	</div>
+	
+		<div class="row two">
+	       <div class="col-md-4">
+			 <div class="form-group" id="Other-div" style="display:none;">
+	          <label for="students0-5">5-12 years:</label> 
+	          <aui:input type="number" value="0" id="nonStudents5-12" name="nonStudents5-12"  cssClass="form-control"> </aui:input>
+	          
+	        </div>
+	       </div>
+	       
+	       <div class="col-md-4">
+	     	<aui:input type="number" value="0" id="students5-12" name="students5-12"  cssClass="form-control"> </aui:input>
+	       </div>
+	         
+	       <div class="col-md-4">
+	        
+			 </div>
+	</div>
+	
+		<div class="row three">
+	       <div class="col-md-4">
+			 <div class="form-group" id="Other-div" style="display:none;">
+	           <label for="students0-5">12 years +:</label> 
+	           <aui:input type="number" value="0" id="nonStudents12+" name="nonStudents12+"  cssClass="form-control"> </aui:input>
+	        </div>
+	       </div>
+	       
+	       <div class="col-md-4">
+	     	<aui:input type="number" value="0" id="students12+" name="students12+"  cssClass="form-control"></aui:input>
+	       </div>
+	         
+	       <div class="col-md-4">
+	        
+			 </div>
+	</div>
+	
+	<div class="row total">
+	       <div class="col-md-4">
+			 
+	       </div>
+	       
+	       <div class="col-md-4">
+	     	<label for="students0-5">12 years +:</label> 
+	       </div>
+	         
+	       <div class="col-md-4">
+	        <h3 id="result"></h3>
+			 </div>
+	</div>
+	
+	
+			 <button  type="submit"  onclick="calculateTotal()" class="btn btn-submit"> <liferay-ui:message key="Submit"/></button>
+</aui:form>
+			 
+
+
+          
+          </div>
+           </div>
+           </div>
+ 
+
+<script>
+        function calculateTotal() {
+            var students0_5 = parseInt(document.getElementById("students0-5").value);
+            var nonStudents0_5 = parseInt(document.getElementById("nonStudents0-5").value);
+
+            var students5_12 = parseInt(document.getElementById("students5-12").value);
+            var nonStudents5_12 = parseInt(document.getElementById("nonStudents5-12").value);
+
+            var students12_plus = parseInt(document.getElementById("students12+").value);
+            var nonStudents12_plus = parseInt(document.getElementById("nonStudents12+").value);
+
+            var nationality = document.getElementById("nationality").value;
+
+            var rateStudents0_5 = 0;
+            var rateNonStudents0_5 = 0;
+
+            var rateStudents5_12 = 25;
+            var rateNonStudents5_12 = 0;
+
+            var rateStudents12_plus = 25;
+            var rateNonStudents12_plus = 0;
+
+            switch (nationality) {
+                case "indian":
+                    rateNonStudents0_5 = 0;
+                    rateNonStudents5_12 = 25;
+                    rateNonStudents12_plus = 50;
+                    break;
+                case "foreign":
+                    rateNonStudents0_5 = 0;
+                    rateNonStudents5_12 = 800;
+                    rateNonStudents12_plus = 1200;
+                    break;
+            }
+            var totalAmount = (students0_5 * rateStudents0_5 + nonStudents0_5 * rateNonStudents0_5) +
+            (students5_12 * rateStudents5_12 + nonStudents5_12 * rateNonStudents5_12) +
+            (students12_plus * rateStudents12_plus + nonStudents12_plus * rateNonStudents12_plus);
+
+var resultDiv = document.getElementById("result");
+resultDiv.innerHTML =  totalAmount + " rupees";
+}
+</script>
