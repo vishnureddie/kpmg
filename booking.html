@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ticket Booking</h2>
+    <form id="bookingForm">
+        <label for="students0-5">Students (0-5 years):</label>
+        <input type="number" id="students0-5" name="students0-5" min="0" value="0">
+
+        <label for="nonStudents0-5">Non-Students (0-5 years):</label>
+        <input type="number" id="nonStudents0-5" name="nonStudents0-5" min="0" value="0">
+
+        <label for="students5-12">Students (5-12 years):</label>
+        <input type="number" id="students5-12" name="students5-12" min="0" value="0">
+
+        <label for="nonStudents5-12">Non-Students (5-12 years):</label>
+        <input type="number" id="nonStudents5-12" name="nonStudents5-12" min="0" value="0">
+
+        <label for="students12+">Students (12+ years):</label>
+        <input type="number" id="students12+" name="students12+" min="0" value="0">
+
+        <label for="nonStudents12+">Non-Students (12+ years):</label>
+        <input type="number" id="nonStudents12+" name="nonStudents12+" min="0" value="0">
+
+        <label for="nationality">Select Nationality:</label>
+        <select id="nationality" name="nationality">
+            <option value="indian">Indian</option>
+            <option value="foreign">Foreign</option>
+        </select>
+
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateTotal() {
+            var students0_5 = parseInt(document.getElementById("students0-5").value);
+            var nonStudents0_5 = parseInt(document.getElementById("nonStudents0-5").value);
+
+            var students5_12 = parseInt(document.getElementById("students5-12").value);
+            var nonStudents5_12 = parseInt(document.getElementById("nonStudents5-12").value);
+
+            var students12_plus = parseInt(document.getElementById("students12+").value);
+            var nonStudents12_plus = parseInt(document.getElementById("nonStudents12+").value);
+
+            var nationality = document.getElementById("nationality").value;
+
+            var rateStudents0_5 = 0;
+            var rateNonStudents0_5 = 0;
+
+            var rateStudents5_12 = 25;
+            var rateNonStudents5_12 = 0;
+
+            var rateStudents12_plus = 25;
+            var rateNonStudents12_plus = 0;
+
+            switch (nationality) {
+                case "indian":
+                    rateNonStudents0_5 = 0;
+                    rateNonStudents5_12 = 25;
+                    rateNonStudents12_plus = 50;
+                    break;
+                case "foreign":
+                    rateNonStudents0_5 = 0;
+                    rateNonStudents5_12 = 800;
+                    rateNonStudents12_plus = 1200;
+                    break;
+            }
+
+            var totalAmount = (students0_5 * rateStudents0_5 + nonStudents0_5 * rateNonStudents0_5) +
+                              (students5_12 * rateStudents5_12 + nonStudents5_12 * rateNonStudents5_12) +
+                              (students12_plus * rateStudents12_plus + nonStudents12_plus * rateNonStudents12_plus);
+
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Total Amount: " + totalAmount + " rupees";
+        }
+    </script>
+</body>
+</html>
