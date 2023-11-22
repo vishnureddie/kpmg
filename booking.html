@@ -1,3 +1,153 @@
+         <div class="row">
+	       <div class="col-md-6">
+	        <div class="form-group">
+ 			<aui:input type="text" name="hi_title" label="Name" cssClass="form-control">
+	          <aui:validator name="required"></aui:validator>
+
+	          </aui:input>
+	         </div>
+	        
+	        <div class="form-group">  
+	          <aui:input type="text" name="hi_title" label="Mobile no" cssClass="form-control">
+	          <aui:validator name="required"></aui:validator>
+
+	          </aui:input>
+	         </div>
+	         </div>
+	         
+	         <div class="col-md-6">
+	        <div class="form-group">
+ 			<aui:input type="text" name="hi_title" label="Email" cssClass="form-control">
+	          <aui:validator name="required"></aui:validator>
+
+	          </aui:input>
+	         </div>
+	        
+	        <div class="form-group">  
+	          <aui:input type="date" name="hi_title" label="Date of booking" cssClass="form-control">
+	          <aui:validator name="required"></aui:validator>
+
+	          </aui:input>
+	         </div>
+	         </div>
+	         
+	        </div>
+next
+
+<div class="row">
+	       <div class="col-md-6">	        
+	        <div class="form-group">
+	        <label for="students0-5">0-5 years:</label>  
+	          <aui:input type="number" value="0" id="students0-5" name="students0-5"  cssClass="form-control">
+	          </aui:input>
+	         </div>
+	         
+	         <div class="form-group">
+	         <label for="students0-5">5-12 years:</label> 
+	          <aui:input type="number" value="0" id="students5-12" name="students5-12"  cssClass="form-control">
+	          </aui:input>
+	         </div>
+	         
+	         <div class="form-group">
+	         <label for="students0-5">12 years +:</label> 
+	          <aui:input type="number" value="0" id="students12+" name="students12+"  cssClass="form-control">
+	          </aui:input>
+	         </div>
+	         
+	         
+        <!-- <select id="nationality" name="nationality">
+            <option value="indian">Indian</option>
+            <option value="foreign">Foreign</option>
+        </select> -->
+        
+        <div class="form-group"> 
+        <label for="nationality">Select Nationality:</label>
+         <aui:select id="nationality" name="nationality" >
+				<aui:option selected="true" >Select Nationality</aui:option>
+					<aui:option value="indian">Indian</aui:option>
+					<aui:option value="foreign">Foreign</aui:option>
+		</aui:select>
+        </div>
+	         
+	        </div>
+	        
+	        <div class="col-md-6">	        
+	        <div class="form-group">  
+	          <aui:input type="number" value="0" id="nonStudents0-5" name="nonStudents0-5" cssClass="form-control">
+	          </aui:input>
+	         </div>
+	         
+	         <div class="form-group">  
+	          <aui:input type="number" value="0" id="nonStudents5-12" name="nonStudents5-12"  cssClass="form-control">
+	          </aui:input>
+	         </div>
+	         
+	         <div class="form-group">  
+	          <aui:input type="number" value="0" id="nonStudents12+" name="nonStudents12+"  cssClass="form-control">
+	          </aui:input>
+	         </div>
+	         
+	         <button cssClass="btn btn-submit" type="button" onclick="calculateTotal()">Calculate Total</button>
+	        </div>
+	        
+</div>
+
+<div id="result"></div>
+
+<script>
+        function calculateTotal() {
+            var students0_5 = parseInt(document.getElementById("students0-5").value);
+            var nonStudents0_5 = parseInt(document.getElementById("nonStudents0-5").value);
+
+            var students5_12 = parseInt(document.getElementById("students5-12").value);
+            var nonStudents5_12 = parseInt(document.getElementById("nonStudents5-12").value);
+
+            var students12_plus = parseInt(document.getElementById("students12+").value);
+            var nonStudents12_plus = parseInt(document.getElementById("nonStudents12+").value);
+
+            var nationality = document.getElementById("nationality").value;
+
+            var rateStudents0_5 = 0;
+            var rateNonStudents0_5 = 0;
+
+            var rateStudents5_12 = 25;
+            var rateNonStudents5_12 = 0;
+
+            var rateStudents12_plus = 25;
+            var rateNonStudents12_plus = 0;
+
+            switch (nationality) {
+                case "indian":
+                    rateNonStudents0_5 = 0;
+                    rateNonStudents5_12 = 25;
+                    rateNonStudents12_plus = 50;
+                    break;
+                case "foreign":
+                    rateNonStudents0_5 = 0;
+                    rateNonStudents5_12 = 800;
+                    rateNonStudents12_plus = 1200;
+                    break;
+            }
+
+            var totalAmount = (students0_5 * rateStudents0_5 + nonStudents0_5 * rateNonStudents0_5) +
+                              (students5_12 * rateStudents5_12 + nonStudents5_12 * rateNonStudents5_12) +
+                              (students12_plus * rateStudents12_plus + nonStudents12_plus * rateNonStudents12_plus);
+
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Total Amount: " + totalAmount + " rupees";
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
