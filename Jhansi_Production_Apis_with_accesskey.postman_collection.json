@@ -1,0 +1,1092 @@
+{
+	"info": {
+		"_postman_id": "62a0409e-1ea4-40aa-810a-d3187bee705f",
+		"name": "Jhansi_Production_Apis_with_accesskey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13462032"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobileNumber",
+							"value": "9440758801",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/citizen-login",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"citizen-login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password after login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "160123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "9177992552",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/update-password-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"update-password-with-accesskey"
+					]
+				},
+				"description": "Update Password with accesskey"
+			},
+			"response": []
+		},
+		{
+			"name": "Send OTP Request Types",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/send-otp-request-types",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"send-otp-request-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send OTP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobileNumber",
+							"value": "9440758801",
+							"type": "text"
+						},
+						{
+							"key": "requestType",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "sendSMS",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/send-otp",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"send-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password with OTP (Forgot Password)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobileNumber",
+							"value": "9440758801",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "6251",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/update-password-with-otp",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"update-password-with-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OTP Validation",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mobileNumber",
+							"value": "9618315123",
+							"type": "text"
+						},
+						{
+							"key": "otp",
+							"value": "2651",
+							"type": "text"
+						},
+						{
+							"key": "requestType",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "accessKey",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/otp-validation",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"otp-validation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "185140",
+							"type": "text"
+						},
+						{
+							"key": "emailAddress",
+							"value": "jagan73 1236@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "9440758801",
+							"type": "text"
+						},
+						{
+							"key": "wardId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "mohallaId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "address",
+							"type": "text"
+						},
+						{
+							"key": "notificationAllowed",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/update-user-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"update-user-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "firstName",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "emailAddress",
+							"value": "testtt1@liferay.com",
+							"type": "text"
+						},
+						{
+							"key": "birthDate",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "aadhaarNumber",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "panNumber",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "9618315123",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "9618315123",
+							"type": "text"
+						},
+						{
+							"key": "userType",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "wardId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "mohallaId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "fcmToken",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "deviceType",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "deviceModel",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "notificationAllowed",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.citizens/register-user",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.citizens",
+						"register-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Suggestions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "185140",
+							"type": "text"
+						},
+						{
+							"key": "start",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.suggestions/get-suggestions-byuser-id-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.suggestions",
+						"get-suggestions-byuser-id-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Suggestion",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "185140",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Test%20Desc",
+							"type": "text"
+						},
+						{
+							"key": "fileExist",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.suggestions/add-suggestion-with-flag-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.suggestions",
+						"add-suggestion-with-flag-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Suggestions Count",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "185140",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.suggestions/suggestions-count-byuser-id-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.suggestions",
+						"suggestions-count-byuser-id-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Complaint",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "185140",
+							"type": "text"
+						},
+						{
+							"key": "organizationId",
+							"value": "61848",
+							"type": "text"
+						},
+						{
+							"key": "complaintTypeId",
+							"value": "56",
+							"type": "text"
+						},
+						{
+							"key": "wardId",
+							"value": "61",
+							"type": "text"
+						},
+						{
+							"key": "mohallaId",
+							"value": "490",
+							"type": "text"
+						},
+						{
+							"key": "otherComplaintType",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Test",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "deviceType",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.complaints/add-complaint-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.complaints",
+						"add-complaint-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaints",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "organizationId",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "complaintTypeId",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "wardId",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "mohallaId",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "185140",
+							"type": "text"
+						},
+						{
+							"key": "statusId",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "fromDate",
+							"value": "null",
+							"type": "text"
+						},
+						{
+							"key": "toDate",
+							"value": "null",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "null",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber",
+							"value": "null",
+							"type": "text"
+						},
+						{
+							"key": "complaintNumber",
+							"value": "null",
+							"type": "text"
+						},
+						{
+							"key": "start",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.complaints/get-complaints-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.complaints",
+						"get-complaints-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Complaints Count",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "160123",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.complaints/count-byuser-id-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.complaints",
+						"count-byuser-id-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get SOS Data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "185140",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.sosdata/get-sos-data-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.sosdata",
+						"get-sos-data-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add or Update SOS Data",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9440758801",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "9440758801",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "160123",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber1",
+							"value": "9440758801",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber2",
+							"value": "9177992552",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber3",
+							"value": "9177992552",
+							"type": "text"
+						},
+						{
+							"key": "mobileNumber4",
+							"value": "9440758801",
+							"type": "text"
+						},
+						{
+							"key": "accessToken",
+							"value": "4990a6c21b2fa7b3c7e6356058c5335a,62509e64286e9ac5045588af555813a8,7651d1580bed6bde7059822deed40926",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://smartcityjhansi.com/api/jsonws/jhansi.sosdata/add_update-sos-data-with-accesskey",
+					"protocol": "https",
+					"host": [
+						"smartcityjhansi",
+						"com"
+					],
+					"path": [
+						"api",
+						"jsonws",
+						"jhansi.sosdata",
+						"add_update-sos-data-with-accesskey"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
