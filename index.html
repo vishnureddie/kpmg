@@ -1,3 +1,118 @@
+ <div class="captcha-container">
+                <canvas id="captcha-canvas" width="200" height="60"></canvas>
+                <button type="button" id="refresh-captcha">Refresh</button>
+                <input type="text" id="captcha-input" placeholder="Enter CAPTCHA" required>
+            </div>
+
+
+
+
+
+
+
+
+
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#captcha-canvas {
+    border: 1px solid #ccc;
+}
+
+#refresh-captcha {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+// Generate a random string for the CAPTCHA
+function generateCaptcha() {
+    const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMMNOPQRSTUVWXYZ';
+    let captcha = '';
+    for (let i = 0; i < 6; i++) {
+        captcha += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return captcha;
+}
+
+// Draw the CAPTCHA on the canvas
+function drawCaptcha() {
+    const canvas = document.getElementById('captcha-canvas');
+    const ctx = canvas.getContext('2d');
+    const captcha = generateCaptcha();
+
+    // Clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Set the font and size
+    ctx.font = '30px Arial';
+    ctx.fillStyle = '#000000';
+
+    // Calculate the width of the text
+    const textWidth = ctx.measureText(captcha).width;
+
+    // Draw the text centered
+    ctx.fillText(captcha, (canvas.width - textWidth) / 2, 40);
+
+    // Add some noise (optional)
+    for (let i = 0; i < 30; i++) {
+        ctx.beginPath();
+        ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+        ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+        ctx.stroke();
+    }
+
+    return captcha;
+}
+
+// Initialize the CAPTCHA
+let captchaValue = drawCaptcha();
+
+// Refresh the CAPTCHA when the button is clicked
+const refreshButton = document.getElementById('refresh-captcha');
+refreshButton.addEventListener('click', () => {
+    captchaValue = drawCaptcha();
+});
+
+// Validate the CAPTCHA when the form is submitted
+const form = document.getElementById('login-form');
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the form from submitting
+
+    const captchaInput = document.getElementById('captcha-input');
+    if (captchaInput.value === captchaValue) {
+        // CAPTCHA is valid, submit the form
+        form.submit();
+    } else {
+        // CAPTCHA is invalid, display an error message
+        alert('Invalid CAPTCHA. Please try again.');
+        captchaValue = drawCaptcha();
+        captchaInput.value = '';
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
